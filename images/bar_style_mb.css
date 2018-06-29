@@ -1,0 +1,119 @@
+﻿@charset "utf-8";
+/* CSS Document */
+html {	height: 100%;}
+/*
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{border:0; outline:0; vertical-align:baseline; margin:0; padding:0; list-style:none;}
+*/
+
+/* Reset */
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, font, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+/*table, caption, tbody, tfoot, thead, tr, th, td */{  
+     margin: 0;  
+     padding: 0;  
+     border: 0;  
+     outline: 0;  
+     font-size: 100%;  
+     /*vertical-align: baseline;  */
+    /*background: transparent;*/
+}
+a img {border:none;}
+body {width: 100%; height:100%;margin: 0 auto; padding:0; }
+
+blockquote, q { quotes: none; }  
+blockquote:before, blockquote:after,  
+q:before, q:after { content: ''; }  
+:focus { outline: 0; }
+
+ul, li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+
+/* HEADER
+================= */
+#headerbar{background: url(images/capcom_bar.gif) left top repeat-x;width:100%;  height:40px; position:inherit;font-size: 12px;}
+#topBar{ padding:0 7%; width:86%;}
+#capcom-logo { background: url(images/capcom_logo.jpg) center center no-repeat; width:150px; height:40px;  float:left;}
+#capcom-logo a{ display:block; width:100px; height:40px;text-indent: -9999px;}
+#top-menu{ float:right; text-align:right; width:60%; min-width:550px; height:40px; line-height:40px;color:#cccccc; position:relative; z-index:9999px;}
+#top-menu a, #top-menu a:hover, #top-menu a:active, #top-menu a:visited{color:#cccccc; text-decoration:none;}
+.topBar-right{ float:right; padding:0 5px;font-size: 12px;}
+.topBar-right ul li{display: inline-block; zoom: 1; *display: inline; height:40px;}
+.topBar-right ul li a{display:block; margin:8px 3px; }
+.topBar-right ul li a.topBar-fb{ background: url(images/topBar_fb.gif) center top no-repeat; width:23px; height:23px;}
+.topBar-right ul li a.topBar-yt{ background: url(images/topBar_yt.gif) center top no-repeat; width:23px; height:23px;}
+.topBar-right ul li a.topBar-btn{ background: url(images/topBar_btn.gif) center top no-repeat; width:92px; height:24px;}
+
+.topBar-right ul li a.topBar-fb:hover{ background-position:center bottom;}
+.topBar-right ul li a.topBar-yt:hover{ background-position:center bottom;}
+.topBar-right ul li a.topBar-btn:hover{ background-position:center bottom;}
+
+/*
+=======================================================
+	GAME LIST
+=======================================================
+*/
+
+#gamelist {
+	position:absolute;
+	right:5px;
+	top:39px;
+	height:104px;
+	z-index:9999;
+	display:none;
+}
+#gamelist .arrow { background:url(images/gamelist_top.png) right top no-repeat; height:6px;display:block;overflow:hidden;}
+
+#GameListBG {
+	background:url(images/gamelist_bg_l.png) left top no-repeat;
+	padding-left:10px;
+	height:104px;
+}
+* html #GameListBG {background:url(images/gamelist_bg.gif) left top no-repeat;}
+
+
+#xSlideBox {float:left;height:90px;position:relative;margin:0px 0px 0px 0px;text-align:left;background:url(images/gamelist_bg_r.png) right top no-repeat;
+	padding:5px 15px 5px 5px;
+	height:94px;}
+/*左右箭頭*/
+#xSlideBox .leaf a {display:block;width:9px;height:19px; position:absolute;z-index:1000;text-indent:-9999px;}
+#xSlideBox .leaf a:hover {/*cursor:pointer;*/cursor:default;}
+#xSlideBox a.prevPage {background: url(images/btn_prev.gif) left top no-repeat;top:26px;}
+#xSlideBox a.nextPage {background: url(images/btn_next.gif) left top no-repeat;right:0px;top:26px;}
+#xSlideBox a.prevPage:hover,
+#xSlideBox a.nextPage:hover {background-position:left bottom;}
+#xSlideBox .leaf a.disabled {background-position:left top;cursor:default;}
+
+#xSlideBox .scrollable {position:relative;overflow:hidden;height:99px;width:263px;margin-left:35px;}
+
+#xSlideBox .item {width:67px;height:80px;float:left;margin:7px 5px 0 5px;cursor:pointer;font-size: 12px;}
+/*遊戲圖片*/
+#xSlideBox .item a.img {display:block; width:67px;height:67px; text-align:center; color:#222222; background-position:left top; padding:0; margin:0;}
+#xSlideBox .item.active a.img:hover{background-position:left bottom;color:#de8800;}
+
+#xSlideBox .item.mhfg a.img{background:url(images/game_mhfg.jpg) no-repeat;}
+
+#xSlideBox .item.mhxr a.img{background:url(images/game_mhxr.jpg) no-repeat;}
+
+#xSlideBox .item.palm a.img{background:url(images/game_palm.jpg) no-repeat;}
+
+/*標籤*/
+#xSlideBox .label {height:55px;display:block;}
+#xSlideBox .label.hot {background: url() right top no-repeat;}
+* html #xSlideBox .label.hot {background: url() right top no-repeat;}
+#xSlideBox .label.new {background: url() right top no-repeat;}
+* html #xSlideBox .label.new {background: url() right top no-repeat;}
+
+
+@media only screen and ( max-width: 939px ) {
+	#top-menu{ display:none; width:0;}
+}
